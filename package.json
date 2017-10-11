@@ -1,0 +1,28 @@
+{
+  "name": "tomify",
+  "version": "0.0.0",
+  "description": "Provides support for paradigms commonly used in Tomify Applications",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "webpack --progress",
+    "dev": "webpack-dev-server --progress",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "tomprats/tomify-js",
+  "keywords": [
+    "tomify"
+  ],
+  "author": "Tom Prats <tom@tomify.me> (http://tomify.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomprats/tomify-js/issues"
+  },
+  "homepage": "https://github.com/tomprats/tomify-js#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  }
+}
