@@ -8,7 +8,8 @@
       overrides: {
         export: { after: true },
         from: { after: true },
-        import: { after: true }
+        import: { after: true },
+        return: { after: true }
       }
     }],
     "quotes": ["error", "double"],
