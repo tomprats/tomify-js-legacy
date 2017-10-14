@@ -1,0 +1,18 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "comma-dangle": ["error", "never"],
+    "keyword-spacing": ["error", {
+      before: true,
+      after: false,
+      overrides: {
+        export: { after: true },
+        from: { after: true },
+        import: { after: true }
+      }
+    }],
+    "quotes": ["error", "double"],
+    "no-extend-native": "off",
+    "object-curly-spacing": ["error", "never"]
+  }
+}

@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/tomify.js",
   output: {
     path: path.resolve(__dirname, "lib"),
     filename: "tomify.js",
@@ -13,6 +13,11 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: "babel-loader"
+      },
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader"
       }
     ]
   }
