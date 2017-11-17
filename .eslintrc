@@ -1,19 +1,70 @@
 {
+  "parser": "babel-eslint",
+  "env": {"browser": true},
   "extends": "airbnb",
+  "globals": {"$": true},
+  "settings": {"import/resolver": webpack},
   "rules": {
     "comma-dangle": ["error", "never"],
+    "default-case": "off",
+    "function-paren-newline": "off",
     "keyword-spacing": ["error", {
       before: true,
       after: false,
       overrides: {
-        export: { after: true },
-        from: { after: true },
-        import: { after: true },
-        return: { after: true }
+        const: {after: true},
+        else: {after: true},
+        export: {after: true},
+        from: {after: true},
+        import: {after: true},
+        let: {after: true},
+        return: {after: true},
+        throw: {after: true}
       }
     }],
-    "quotes": ["error", "double"],
     "no-extend-native": "off",
-    "object-curly-spacing": ["error", "never"]
+    "no-unused-expressions": ["error", {allowShortCircuit: true}],
+    "object-curly-spacing": ["error", "never"],
+    "quotes": ["error", "double"],
+    "react/jsx-filename-extension": ["error", {extensions: [".js", ".jsx"]}],
+    "react/prefer-stateless-function": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/sort-comp": ["error", {
+      order: [
+        "static-methods",
+        "lifecycle",
+        "/^on.+$/",
+        "getters",
+        "setters",
+        "/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/",
+        "everything-else",
+        "/^render.+$/",
+        "render"
+      ],
+      groups: {
+        lifecycle: [
+          "displayName",
+          "propTypes",
+          "contextTypes",
+          "childContextTypes",
+          "mixins",
+          "statics",
+          "defaultProps",
+          "constructor",
+          "getDefaultProps",
+          "getInitialState",
+          "state",
+          "getChildContext",
+          "componentWillInitialize",
+          "componentWillMount",
+          "componentDidMount",
+          "componentWillReceiveProps",
+          "shouldComponentUpdate",
+          "componentWillUpdate",
+          "componentDidUpdate",
+          "componentWillUnmount"
+        ]
+      }
+    }],
   }
 }
