@@ -3,7 +3,7 @@
   "env": {"browser": true},
   "extends": "airbnb",
   "globals": {"$": true},
-  "settings": {"import/resolver": webpack},
+  "settings": {"import/resolver": "webpack"},
   "rules": {
     "comma-dangle": ["error", "never"],
     "default-case": "off",
